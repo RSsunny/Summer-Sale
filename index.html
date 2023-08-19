@@ -9,14 +9,48 @@
     <!-- daisyUI and Tailwind css Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- tailwind Style -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primary-Color': '#111',
+                'sceondary-Color': '#E527B2',
+              }
+            }
+          }
+        }
+      </script>
     <!-- css style -->
     <style>
-
+        .primary-font{
+            font-family: 'Work Sans', sans-serif;
+        }
     </style>
 </head>
-<body>
- <header>
-    
+<body class="primary-font text-primary-Color">
+ <header class="px-5 py-5 md:px-10 bg-[#F9F6E2]">
+    <section class="w-full h-[700px] md:h-[500px] lg:h-[700px]  flex justify-center items-center">
+        <div class="md:flex justify-center items-center gap-5 lg:gap-20 ">
+            <div class="text-center max-w-[700px] md:max-w-[400px] lg:max-w-[700px] space-y-8 md:space-y-12">
+                <h3 class="text-primary-Color text-xl  md:text-3xl  font-medium ">---SALE FEVER---</h3>
+                <h1 class="text-5xl md:text-4xl lg:text-6xl font-bold">Purchase TK 200 or above & get <span class="text-sceondary-Color">20% off</span></h1>
+                <div class="flex items-center justify-center gap-3 md:gap-6 ">
+                    <p class="text-xl lg:text-2xl font-medium">Use Promo Code</p>
+                    <button class="px-2 lg:px-4 py-1 lg:py-2 bg-sceondary-Color text-white font-semibold rounded-md text-lg lg:text-2xl hover:bg-opacity-95 ">SELL200</button>
+                </div>
+            </div>
+            <div class="max-w-[600px] mt-10">
+                <img src="./images/Summer 1.png" alt="" class="w-full" >
+            </div>
+        </div>
+    </section>
  </header>
  <main>
 
