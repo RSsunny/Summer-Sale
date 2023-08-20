@@ -55,10 +55,10 @@
  <main>
     <section class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4  px-5 py-5">
     <div>
-        <div class="space-y-10 my-10">
+        <div class="space-y-10 my-10 ">
         <h1 class="text-5xl font-semibold">Kitchenware</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 justify-between items-center gap-5 ">
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod1.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -77,7 +77,7 @@
                   
                 </div>
             </div>
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod2.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -96,7 +96,7 @@
                   
                 </div>
             </div>
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod3.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -120,7 +120,7 @@
         <div class="space-y-10 my-10">
         <h1 class="text-5xl font-semibold">Sportswear</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 justify-between items-center gap-5 ">
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod4.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -139,7 +139,7 @@
                   
                 </div>
             </div>
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod5.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -158,7 +158,7 @@
                   
                 </div>
             </div>
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod6.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -182,7 +182,7 @@
         <div class="space-y-10 my-10">
         <h1 class="text-5xl font-semibold">Kitchenware</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 justify-between items-center gap-5 ">
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod7.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -201,7 +201,7 @@
                   
                 </div>
             </div>
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod8.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -220,7 +220,7 @@
                   
                 </div>
             </div>
-            <div class="card shadow-lg">
+            <div onclick="cardPrice(this)" class="card shadow-lg">
                 <figure class="px-10 py-4 bg-gray-200 m-5">
                   <img src="./images/prod9.png" alt="Shoes" class="rounded-xl " />
                 </figure>
@@ -246,15 +246,15 @@
          <div class="p-4 space-y-3">
             <h1 class="text-2xl font-medium">Have coupon?</h1>
             <div class="relative flex items-center">
-                <input type="text" placeholder="Coupon code" class=" w-full outline-none border pr-24 pl-3   py-2 border-black inline-block">
-                <button class="absolute right-0 px-5 py-2 bg-sceondary-Color text-white text-lg font-semibold inline-block rounded-l-lg">Apply</button>
+                <input id="coupon-fild" type="text" placeholder="Coupon code" class=" w-full outline-none border pr-24 pl-3   py-2 border-black inline-block">
+                <button onclick="couponCart(this)" id="coupone-btn" class="absolute right-0 px-5 py-2 bg-sceondary-Color text-white text-lg font-semibold inline-block rounded-l-lg "  >Apply</button>
             </div>
          </div>
          <div class="p-4 space-y-5">
-            <div class="border-b border-black py-2 min-h-[200px] space-y-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, corporis.</div>
+            <div class="border-b border-black py-2 min-h-[200px] space-y-2"></div>
             <div class="space-y-5 border-b border-black py-2">
-                <h1 class="text-xl font-medium">Total price: <span></span></h1>
-                <h1 class="text-xl font-medium">Discount: <span></span></h1>
+                <h1 class="text-xl font-medium">Total price: <span id="totalFild">00</span></h1>
+                <h1 class="text-xl font-medium">Discount: <span id="discount"></span></h1>
                 <h1 class="text-xl font-medium">Total: <span></span></h1>
             </div>
             <div class="-mt-5">
@@ -265,7 +265,9 @@
     </section>
  </main>
  <footer>
-
+  <div class="m-32" disabled >
+    <button id="myButton" >Click me</button>
+  </div>
  </footer>
     <!--javaScript link -->
     <script src="./script/main.js"></script>
