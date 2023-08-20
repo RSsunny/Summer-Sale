@@ -1,13 +1,4 @@
-// function coupone(){
-//     const inputFild=document.getElementById('coupon-fild')
-//     const inputValue=inputFild.value
 
-//     if(){
-//         const 
-//         const discount=document.getElementById('discount')
-//     }
-//     console.log(inputValue);
-// }
 function cardPrice(targate){
     const productPrice=parseFloat(targate.childNodes[3].childNodes[5].innerText.split(' ')[0]).toFixed(2)
     const cartName=targate.childNodes[3].childNodes[3].innerText
@@ -31,3 +22,13 @@ document.getElementById('coupon-fild').addEventListener('keyup', function(even){
         applyBtn.setAttribute('disabled',true)
     }
 })
+function clickApplyBtn(){
+    const totalPriceFild=document.getElementById('totalFild')
+    const totalPrice=totalPriceFild.innerText
+    const discount=totalPrice*0.2
+    const setDiscount=document.getElementById('discount')
+    setDiscount.innerText=discount.toFixed(2)
+    const total=totalPrice-discount
+    const totalAmountFild=document.getElementById('last-total')
+    totalAmountFild.innerText=total
+}
