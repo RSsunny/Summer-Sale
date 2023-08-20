@@ -30,8 +30,7 @@ function cardPrice(targate){
 }
 function clickApplyBtn(){
     const couponeFild=document.getElementById('coupon-fild')
-    const couponeValue=couponeFild.value
-    
+    const couponeValue=couponeFild.value  
     if(couponeValue==='SELL200'){
     const totalPriceFild=document.getElementById('totalFild')
     const totalPrice=parseFloat(totalPriceFild.innerText)
