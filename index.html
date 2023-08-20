@@ -242,30 +242,41 @@
         </div>
         </div>
     </div>
-        <div class="w-full md:w-[300px] mx-auto bg-white h-fit  mt-10 md:mt-32">
-         <div class="p-4 space-y-3">
+        <div class="w-full md:w-[300px] mx-auto  h-fit  mt-10 md:mt-32">
+         <div class="p-4 space-y-3 rounded-lg bg-white">
             <h1 class="text-2xl font-medium">Have coupon?</h1>
             <div class="relative flex items-center">
                 <input id="coupon-fild" type="text" placeholder="Coupon code" class=" w-full outline-none border pr-24 pl-3   py-2 border-black inline-block opacity-50">
-                <button onclick="clickApplyBtn()" id="coupone-btn" class="absolute right-0 px-5 py-2 bg-sceondary-Color text-white text-lg font-semibold inline-block rounded-l-lg opacity-80 " disabled >Apply</button>
+                <button onclick="clickApplyBtn()" id="coupone-btn" class="absolute right-0 px-5 py-2 bg-sceondary-Color text-white text-base font-semibold inline-block rounded-l-lg opacity-80 placeholder:opacity-100 placeholder:text-black " disabled >Apply</button>
             </div>
          </div>
-         <div class="p-4 space-y-5">
-            <div class="border-b border-black py-2 min-h-[200px] space-y-1 font-medium"></div>
+         <div class=" p-4 space-y-5 rounded-lg bg-white mt-5">
+            <div class="border-b border-black py-2 h-[200px] space-y-1 font-medium overflow-y-scroll"></div>
             <div class="space-y-5 border-b border-black py-2">
-                <h1 class="text-xl font-medium">Total price: <span id="totalFild">00</span></h1>
-                <h1 class="text-xl font-medium">Discount: <span id="discount"></span></h1>
-                <h1 class="text-xl font-medium">Total: <span id="last-total"></span></h1>
+                <h1 class="text-xl ">Total price: <span id="totalFild">00</span></h1>
+                <h1 class="text-xl ">Discount: <span id="discount">00</span></h1>
+                <h1 class="text-xl ">Total: <span id="last-total"></span></h1>
             </div>
             <div class="-mt-5">
-                <button id="make-btn" class="w-full py-3 text-xl font-semibold text-white bg-sceondary-Color text-center rounded-lg opacity-80">Make Purchase</button>
-            </div>
-         </div>               
-     </div>
-    </section>
- </main>
- <footer>
- </footer>
+            <button id="make-btn" class="w-full py-3 text-xl font-semibold text-white bg-sceondary-Color text-center rounded-lg opacity-80" onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
+            <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box text-center">
+          <img class="mx-auto" src="./images/congo.png" alt="">
+          <h1 class="text-xl md:text-5xl font-bold text-center ">Congratulations</h1>
+           <p class="py-4">Your Purchase the product</p>
+          <div class="modal-action">
+            <button class="px-4 py-2 bg-sceondary-Color text-white text-xl font-semibold rounded-md  mx-auto">Go Home</button>
+          </div>
+         </form>
+      </dialog>
+
+    </div>
+   </div>               
+  </div>
+  </section>
+</main>
+<footer>
+</footer>
     <!--javaScript link -->
     <script src="./script/main.js"></script>
 </body>
