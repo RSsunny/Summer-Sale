@@ -2,10 +2,10 @@
 function cardPrice(targate){
     const productPrice=parseFloat(targate.childNodes[3].childNodes[5].innerText.split(' ')[0]).toFixed(2)
     const cartName=targate.childNodes[3].childNodes[3].innerText
-    const cartList=targate.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[3].childNodes[1]
+    const cartList=document.getElementById('list-card')
     const count=cartList.childElementCount
     const p=document.createElement('p')
-    p.innerHTML=`${count+1}. ${cartName}
+    p.innerHTML=`${count+1}.  ${cartName}
     `
     cartList.appendChild(p)
     const totalFild=document.getElementById('totalFild').innerText
@@ -31,7 +31,7 @@ function cardPrice(targate){
 function clickApplyBtn(){
     const couponeFild=document.getElementById('coupon-fild')
     const couponeValue=couponeFild.value
-    couponeFild.value=' '
+    
     if(couponeValue==='SELL200'){
     const totalPriceFild=document.getElementById('totalFild')
     const totalPrice=parseFloat(totalPriceFild.innerText)
@@ -42,4 +42,15 @@ function clickApplyBtn(){
     const totalAmountFild=document.getElementById('last-total')
     totalAmountFild.innerText=total
     }
+    couponeFild.value=' '
+}
+function clearCart(){
+    const listCart=document.getElementById('list-card')
+    listCart.innerText=' '
+    const totalPriceRemove=document.getElementById('totalFild')
+    totalPriceRemove.innerText=0
+     const discountRemove=document.getElementById('discount')
+     discountRemove.innerText=' '
+     const lastTotalRemove=document.getElementById('last-total')
+     lastTotalRemove.innerText=' '
 }
