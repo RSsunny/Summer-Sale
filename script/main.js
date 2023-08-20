@@ -10,25 +10,36 @@ function cardPrice(targate){
     cartList.appendChild(p)
     const totalFild=document.getElementById('totalFild').innerText
     const allTotal=parseFloat(totalFild)+parseFloat(productPrice)
-    document.getElementById("totalFild").innerText = allTotal.toFixed(2);   
+    document.getElementById("totalFild").innerText = allTotal.toFixed(2);
+    document.getElementById("last-total").innerText = allTotal.toFixed(2);
+    const applyButton=document.getElementById('coupone-btn')
+    if(allTotal>=200){
+        applyButton.removeAttribute('disabled')   
+        applyButton.classList.remove('opacity-80')
+    }else{
+        applyButton.setAttribute('disabled',true)
+        applyButton.classList.add('opacity-80')
+    }  
+    if(allTotal>0){
+        const makeBtn=document.getElementById('make-btn')
+        makeBtn.removeAttribute('disabled')
+        makeBtn.classList.remove('opacity-80')
+    }else{
+        makeBtn.setAttribute('disabled',true)
+    }
 }
-document.getElementById('coupon-fild').addEventListener('keyup', function(even){
-    const coupon=even.target.value;
-    const applyBtn=document.getElementById('coupone-btn')
-    if(coupon!=='SELL200'){
-      applyBtn.removeAttribute('disabled')  
-    }
-    else{
-        applyBtn.setAttribute('disabled',true)
-    }
-})
 function clickApplyBtn(){
+    const couponeFild=document.getElementById('coupon-fild')
+    const couponeValue=couponeFild.value
+    couponeFild.value=' '
+    if(couponeValue==='SELL200'){
     const totalPriceFild=document.getElementById('totalFild')
-    const totalPrice=totalPriceFild.innerText
+    const totalPrice=parseFloat(totalPriceFild.innerText)
     const discount=totalPrice*0.2
     const setDiscount=document.getElementById('discount')
     setDiscount.innerText=discount.toFixed(2)
     const total=totalPrice-discount
     const totalAmountFild=document.getElementById('last-total')
     totalAmountFild.innerText=total
+    }
 }
